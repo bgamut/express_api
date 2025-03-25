@@ -2,14 +2,15 @@
 const express = require('express');
 const app = express();
 
+const port = ProcessingInstruction.env.PORT || 8080;
 // Define a route
 app.get('/', (req, res) => {
     res.send('Welcome to the Express.js Tutorial');
 });
 
 // Start the server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(port, () => {
+    'Server started on port ${port}';
 });
 
-module.exports = app;
+
