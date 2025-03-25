@@ -9,7 +9,10 @@
     {
       "src":"/light",
       "dest":"/server.js"
-
+    },
+    {
+      "src":"/light/*",
+      "dest":"/server.js"
     }
   ]
 }
