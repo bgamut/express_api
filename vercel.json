@@ -11,7 +11,7 @@
       "dest":"/server.js"
     },
     {
-      "src":"/light/(.*)",
+      "src":"/update_light/(.*)",
       "dest":"/server.js"
     }
   ]
