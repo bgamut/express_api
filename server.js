@@ -10,13 +10,13 @@ let light_status = [
   }
 ]
 app.get("/", (req, res) => {
-  res.send("Subscribe to Arpan Neupane's channel");
+  res.send("channel");
 });
 app.post("/light", (req, res) => {
   //res.send("you have entered the light page");
   res.json(light_status)
 });
-app.patch('/light/:id',(req,res)=>{
+app.patch('/update_light/:id',(req,res)=>{
   const {id}=req.params;
   const {name, power}=req.body;
   const index = light_status.findIndex(light_status=>light_status.id ===parseInt(id));
