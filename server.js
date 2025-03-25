@@ -12,7 +12,7 @@ let light_status = [
 app.get("/", (req, res) => {
   res.send("channel");
 });
-app.post("/light", (req, res) => {
+app.get("/light", (req, res) => {
   res.send("you have entered the light page");
   //res.json(light_status)
 });
