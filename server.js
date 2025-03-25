@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
   res.send("channel");
 });
 app.get("/light", (req, res) => {
-  res.send("you have entered the light page");
-  //res.json(light_status)
+  //res.send("you have entered the light page");
+  res.json(light_status)
 });
 app.patch('/update_light/:id',(req,res)=>{
   const {id}=req.params;
