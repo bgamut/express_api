@@ -4,11 +4,11 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/"
     },
     {
       "src":"/light",
-      "dest":"server.js"
+      "dest":"/light"
 
     }
   ]
