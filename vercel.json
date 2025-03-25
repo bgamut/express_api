@@ -6,5 +6,10 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
+    {
+      "src":"/light",
+      "dest":"server.js"
+
+    }
   ]
 }
