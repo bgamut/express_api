@@ -44,7 +44,7 @@ async function getData(id) {
   const res = await client.query(`SELECT * FROM users`);
   const found=res.rows.find((user)=>user.id==id);
   console.log(found);
-  return res;
+  return found;
 }
 getData(1)
 */
@@ -58,7 +58,7 @@ async function updatePower(light_name, power) {
   return res;
 }
 
-updatePower("user2", "off");
+updatePower("bedroom", "on");
 */
 /*
 async function deleteUser(light_name) {
@@ -69,7 +69,7 @@ async function deleteUser(light_name) {
   return res;
 }
 
-deleteUser("user2");
+deleteUser("bedroom");
 */
 /*
 async function userExists(light_name){
@@ -88,4 +88,23 @@ async function userExists(light_name){
   }
 }
 userExists("bedroom")
+*/
+
+/*
+async function idExists(id){
+  await client.connect()
+  const SQL = 'SELECT * FROM users WHERE id=$1;';
+  console.log('this is the id from idExists', id);
+  const values = [id];
+  const res = await client.query(SQL,values);
+  const found=res.rows[0]
+  if (found==undefined){
+    console.log(String(id) + " not found")
+  }
+  else{
+    console.log(String(id) + " found")
+    console.log(found)
+  }
+}
+idExists("1")
 */
